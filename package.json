@@ -1,8 +1,15 @@
 {
-  "name": "deployment",
+  "name": "aws-hosting",
   "version": "1.0.0",
-  "description": "",
-  "main": "Deploy.js",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eymass/AWSHosting"
+  },
+  "description": "this project aims to automate the manual work of creating aws resources for hosting a static website",
   "dependencies": {
     "@aws-sdk/client-acm": "^3.12.0",
     "@aws-sdk/client-cloudfront": "^3.12.0",
@@ -10,7 +17,8 @@
     "aws-sdk": "^2.887.0",
     "core-js": "^3.10.1",
     "prompt": "^1.1.0",
-    "regenerator-runtime": "^0.13.7"
+    "regenerator-runtime": "^0.13.7",
+    "winston": "^3.11.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.14",
@@ -29,9 +37,8 @@
     "nodemon": "^2.0.7"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "start": "node local.js"
   },
-  "author": "",
+  "author": "Eyas Mattar",
   "license": "ISC"
 }
